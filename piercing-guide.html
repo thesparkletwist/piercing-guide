@@ -133,6 +133,8 @@ footer p { font-size:11px; color:var(--text-muted); margin-top:4px; opacity:0.6;
   <button class="lang-btn" onclick="setLang('en')">English</button>
 </div>
 
+<p class="header-sub" data-th="ขนาดจิว ระยะหาย และระดับความเจ็บเป็นค่าโดยประมาณ ขึ้นกับสรีระแต่ละคนและคำแนะนำจากช่างเจาะ" data-en="Jewelry size, healing time, and pain level are general estimates. Anatomy and your piercer's advice matter most.">ขนาดจิว ระยะหาย และระดับความเจ็บเป็นค่าโดยประมาณ ขึ้นกับสรีระแต่ละคนและคำแนะนำจากช่างเจาะ</p>
+
 <div class="tabs">
   <button class="tab-btn active" onclick="switchTab('ear')" data-th="👂 หู" data-en="👂 Ear">👂 หู</button>
   <button class="tab-btn" onclick="switchTab('nose')" data-th="👃 จมูก" data-en="👃 Nose">👃 จมูก</button>
@@ -298,10 +300,10 @@ const EAR_DATA = [
     type_en:"Cartilage", type_th:"กระดูกอ่อน",
     heal_en:"6–12 months", heal_th:"6–12 เดือน",
     pain_en:"3/10 — Mild pinch", pain_th:"3/10 — เจ็บน้อย",
-    jewelry_en:"Flat back stud, Hoop, Clicker ring",
-    jewelry_th:"Flat back stud, ห่วง, Clicker ring",
-    tip_en:"Cartilage heals slowly due to low blood flow. Avoid sleeping on the pierced side for at least 3 months. Use a travel pillow with a hole to relieve pressure at night.",
-    tip_th:"กระดูกอ่อนมีเลือดไหลเวียนน้อย ทำให้หายช้ากว่าติ่งหู หลีกเลี่ยงการนอนทับหูที่เจาะอย่างน้อย 3 เดือน ใช้หมอนที่มีรู (travel pillow) ช่วยลดแรงกด"
+    jewelry_en:"Flat back stud for initial healing; hoop or clicker ring once fully healed",
+    jewelry_th:"เริ่มด้วย Flat back stud; ห่วงหรือ Clicker ring หลังหายสนิท",
+    tip_en:"Cartilage heals slowly due to low blood flow. Avoid sleeping on the pierced side for at least 3 months. Hoops move more, so keep them for healed piercings.",
+    tip_th:"กระดูกอ่อนมีเลือดไหลเวียนน้อย ทำให้หายช้ากว่าติ่งหู หลีกเลี่ยงการนอนทับหูที่เจาะอย่างน้อย 3 เดือน ห่วงขยับง่ายกว่า จึงเหมาะกับรูที่หายสนิทแล้ว"
   },
   {
     id:"rook", name:"Rook",
@@ -312,10 +314,10 @@ const EAR_DATA = [
     type_en:"Cartilage", type_th:"กระดูกอ่อน",
     heal_en:"6–12 months", heal_th:"6–12 เดือน",
     pain_en:"7/10 — Strong pressure", pain_th:"7/10 — รู้สึกถูกกดแรง",
-    jewelry_en:"Curved barbell, Clicker ring, Seamless hoop",
-    jewelry_th:"Curved barbell, Clicker ring, Seamless hoop",
-    tip_en:"The rook passes through a thick inner fold of cartilage — expect strong pressure during the piercing. Curved barbells fit best due to the ear anatomy. Not recommended for first-timers.",
-    tip_th:"Rook ทะลุผ่านกระดูกอ่อนชั้นในที่หนา จะรู้สึกถูกกดแรงมากขณะเจาะ Curved barbell เหมาะที่สุดกับตำแหน่งนี้ ไม่แนะนำสำหรับมือใหม่"
+    jewelry_en:"Curved barbell for initial healing; clicker or seamless hoop once healed",
+    jewelry_th:"เริ่มด้วย Curved barbell; Clicker หรือ Seamless hoop หลังหาย",
+    tip_en:"The rook passes through a thick inner fold of cartilage — expect strong pressure during the piercing. Curved barbells fit best during healing due to the ear anatomy. Not recommended for first-timers.",
+    tip_th:"Rook ทะลุผ่านกระดูกอ่อนชั้นในที่หนา จะรู้สึกถูกกดแรงมากขณะเจาะ Curved barbell เหมาะที่สุดช่วงกำลังหายตามรูปทรงหู ไม่แนะนำสำหรับมือใหม่"
   },
   {
     id:"flat-helix", name:"Flat / Flat Helix",
@@ -340,10 +342,10 @@ const EAR_DATA = [
     type_en:"Cartilage", type_th:"กระดูกอ่อน",
     heal_en:"6–12 months", heal_th:"6–12 เดือน",
     pain_en:"4/10 — Quick pinch", pain_th:"4/10 — เจ็บแปลบ",
-    jewelry_en:"Flat back stud, Small hoop (6mm)",
-    jewelry_th:"Flat back stud, ห่วงเล็ก (6mm)",
-    tip_en:"You can stack 1–3 piercings in a row here, called a triple forward helix — one of the most popular stacked ear looks. Start with 16G for initial piercing.",
-    tip_th:"สามารถเจาะซ้อน 1–3 จุดเรียงกันได้ เรียกว่า triple forward helix เป็นหนึ่งใน ear stack look ที่ได้รับความนิยมสูงสุดในตอนนี้"
+    jewelry_en:"Flat back stud for initial healing; small hoop (6mm) once healed",
+    jewelry_th:"เริ่มด้วย Flat back stud; ห่วงเล็ก (6mm) หลังหาย",
+    tip_en:"You can stack 1–3 piercings in a row here, called a triple forward helix. Start with a flat back stud and let your piercer choose the length for swelling.",
+    tip_th:"สามารถเจาะซ้อน 1–3 จุดเรียงกันได้ เรียกว่า triple forward helix แนะนำเริ่มด้วย flat back stud และให้ช่างเลือกความยาวเผื่อบวม"
   },
   {
     id:"daith", name:"Daith",
@@ -352,12 +354,12 @@ const EAR_DATA = [
     gauge:"16G (1.2mm)",
     mm:"8–10 mm diameter",
     type_en:"Cartilage", type_th:"กระดูกอ่อน",
-    heal_en:"6–9 months", heal_th:"6–9 เดือน",
+    heal_en:"6–12 months", heal_th:"6–12 เดือน",
     pain_en:"6/10 — Dull pressure", pain_th:"6/10 — รู้สึกกดทับ",
     jewelry_en:"Clicker ring, Seamless hoop, Curved barbell",
     jewelry_th:"Clicker ring, Seamless hoop, Curved barbell",
-    tip_en:"The daith curves through the innermost cartilage fold — a clicker ring fits the anatomy best. Some report migraine relief from daith piercings, but there is no clinical evidence to support this claim.",
-    tip_th:"Daith อยู่ที่พับกระดูกอ่อนชั้นในสุด Clicker ring เหมาะที่สุด มีหลายคนบอกว่าช่วยบรรเทาไมเกรน แต่ยังไม่มีหลักฐานทางการแพทย์รับรอง"
+    tip_en:"The daith curves through the innermost cartilage fold — a ring or clicker fits the anatomy best. Some report migraine relief from daith piercings, but there is no clinical evidence to support this claim.",
+    tip_th:"Daith อยู่ที่พับกระดูกอ่อนชั้นในสุด ห่วงหรือ Clicker ring เหมาะกับรูปทรงตำแหน่งนี้ มีหลายคนบอกว่าช่วยบรรเทาไมเกรน แต่ยังไม่มีหลักฐานทางการแพทย์รับรอง"
   },
   {
     id:"snug", name:"Snug",
@@ -380,26 +382,27 @@ const EAR_DATA = [
     gauge:"16G (1.2mm)",
     mm:"6 mm",
     type_en:"Cartilage", type_th:"กระดูกอ่อน",
-    heal_en:"4–8 months", heal_th:"4–8 เดือน",
-    pain_en:"5/10 — You'll hear a crunching sound (normal)", pain_th:"5/10 — จะได้ยินเสียงกรอบแกรบ (ปกติ)",
-    jewelry_en:"Flat back stud, Small hoop (6mm)",
-    jewelry_th:"Flat back stud, ห่วงเล็ก (6mm)",
-    tip_en:"The crunching sound you hear during the piercing is cartilage — completely normal. Avoid in-ear headphones and earbuds for 3–6 months as they press directly on the healing piercing.",
-    tip_th:"เสียงกรอบแกรบที่ได้ยินระหว่างเจาะมาจากกระดูกอ่อน — ปกติมาก หลีกเลี่ยงหูฟัง in-ear และ earbud ช่วง 3–6 เดือนแรก เพราะกดทับตรงจุดที่กำลังหาย"
+    heal_en:"6–12 months", heal_th:"6–12 เดือน",
+    pain_en:"5/10 — Pressure; some people hear a crunching sound", pain_th:"5/10 — รู้สึกกด บางคนอาจได้ยินเสียงกรอบแกรบ",
+    jewelry_en:"Flat back stud for initial healing; small hoop (6mm) once healed",
+    jewelry_th:"เริ่มด้วย Flat back stud; ห่วงเล็ก (6mm) หลังหาย",
+    tip_en:"Some people hear a crunching sound during cartilage piercings — this can be normal. Avoid in-ear headphones and earbuds for 3–6 months as they press directly on the healing piercing.",
+    tip_th:"บางคนอาจได้ยินเสียงกรอบแกรบระหว่างเจาะกระดูกอ่อน ซึ่งเกิดขึ้นได้ หลีกเลี่ยงหูฟัง in-ear และ earbud ช่วง 3–6 เดือนแรก เพราะกดทับตรงจุดที่กำลังหาย"
   },
   {
     id:"conch", name:"Conch",
     sub_en:"Inner bowl of the ear", sub_th:"แอ่งด้านในของหู",
     left:54.67, top:52.65,
     gauge:"16G (1.2mm)",
-    mm:"6–8 mm",
+    mm_en:"Initial post may be 8–10 mm; downsize often 6–8 mm",
+    mm_th:"จิวแรกอาจใช้ 8–10 mm; หลังบวมยุบมัก downsize เป็น 6–8 mm",
     type_en:"Cartilage", type_th:"กระดูกอ่อน",
     heal_en:"6–12 months", heal_th:"6–12 เดือน",
     pain_en:"6/10 — Moderate pressure", pain_th:"6/10 — รู้สึกกดพอสมควร",
-    jewelry_en:"Flat back stud, Hoop 10–12mm (once fully healed)",
-    jewelry_th:"Flat back stud, ห่วง 10–12mm (หลังหายสนิท)",
-    tip_en:"Start with a flat back stud for healing. Once fully healed, you can switch to a larger hoop (10–12mm) for a bolder look. A snug 10mm hoop vs a looser 12mm — choose based on your ear anatomy.",
-    tip_th:"เริ่มด้วย flat back stud ระหว่างหาย พอหายสนิทแล้วเปลี่ยนเป็น hoop ขนาดใหญ่ขึ้น (10–12mm) ได้ ห่วง 10mm พอดีหูกว่า ส่วน 12mm จะดูโดดกว่า — เลือกตามรูปทรงหู"
+    jewelry_en:"Flat back stud for initial healing; hoop 10–12mm once fully healed",
+    jewelry_th:"เริ่มด้วย Flat back stud; ห่วง 10–12mm หลังหายสนิท",
+    tip_en:"Start with a flat back stud long enough for swelling, then downsize when swelling settles. Once fully healed, you can switch to a hoop (10–12mm) based on your ear anatomy.",
+    tip_th:"เริ่มด้วย flat back stud ที่ยาวพอเผื่อบวม แล้วค่อย downsize เมื่อบวมยุบ พอหายสนิทแล้วเปลี่ยนเป็นห่วง 10–12mm ได้ตามรูปทรงหู"
   },
   {
     id:"upper-lobe", name:"Upper Lobe",
@@ -412,8 +415,8 @@ const EAR_DATA = [
     pain_en:"2/10 — Very mild", pain_th:"2/10 — เจ็บน้อยมาก",
     jewelry_en:"Stud, Small hoop, Flat back stud",
     jewelry_th:"Stud, ห่วงเล็ก, Flat back stud",
-    tip_en:"Soft tissue heals faster than cartilage. Great for building a stacked lobe look. Wait 6–8 weeks before changing jewelry for the first time.",
-    tip_th:"บริเวณนี้หายเร็วกว่ากระดูกอ่อนมาก เหมาะสำหรับทำ stacked lobe look รอ 6–8 สัปดาห์ก่อนเปลี่ยนจิวครั้งแรก"
+    tip_en:"Soft tissue heals faster than cartilage. Great for building a stacked lobe look. Wait at least 6–8 weeks and have your piercer check before changing jewelry for the first time.",
+    tip_th:"บริเวณนี้หายเร็วกว่ากระดูกอ่อนมาก เหมาะสำหรับทำ stacked lobe look รออย่างน้อย 6–8 สัปดาห์ และให้ช่างเช็กก่อนเปลี่ยนจิวครั้งแรก"
   },
   {
     id:"lobe", name:"Lobe",
@@ -426,8 +429,8 @@ const EAR_DATA = [
     pain_en:"1/10 — Quick pinch", pain_th:"1/10 — เจ็บแปลบเดียว",
     jewelry_en:"Stud, Hoop, Dangle — all styles work",
     jewelry_th:"Stud, ห่วง, Dangle — ใส่ได้ทุกแบบ",
-    tip_en:"The fastest healing piercing. After 6–8 weeks, jewelry can be changed. Downsize to a shorter post once swelling fully subsides for the cleanest look.",
-    tip_th:"หายเร็วที่สุดในบรรดาทุกตำแหน่ง หลัง 6–8 สัปดาห์เปลี่ยนจิวได้เลย พอบวมยุบหมดแล้วเปลี่ยนเป็น post สั้นลงเพื่อให้พอดีและสวยขึ้น"
+    tip_en:"The fastest healing piercing. Jewelry is often ready to change after 6–8 weeks if there is no pain, redness, swelling, or crusting. Downsize to a shorter post once swelling fully subsides.",
+    tip_th:"หายเร็วที่สุดในบรรดาทุกตำแหน่ง โดยมากเริ่มเปลี่ยนจิวได้หลัง 6–8 สัปดาห์ถ้าไม่มีเจ็บ แดง บวม หรือคราบสะเก็ด พอบวมยุบหมดแล้วเปลี่ยนเป็น post สั้นลงให้พอดี"
   }
 ];
 
@@ -456,7 +459,7 @@ const NOSE_DATA = [
     gauge:"16G–18G (1.0–1.2mm)",
     mm:"8–10 mm diameter",
     type_en:"Soft tissue", type_th:"เนื้อ",
-    heal_en:"6–8 months", heal_th:"6–8 เดือน",
+    heal_en:"4–8 weeks initial; full settling can take several months", heal_th:"4–8 สัปดาห์ช่วงแรก; อาจใช้เวลาหลายเดือนกว่าจะนิ่งเต็มที่",
     pain_en:"4/10 — Eyes will water (normal reflex)", pain_th:"4/10 — อาจมีน้ำตาไหลระหว่างเจาะ (ปกติ)",
     jewelry_en:"Horseshoe barbell, Clicker ring, Septum retainer",
     jewelry_th:"Horseshoe barbell, Clicker ring, Septum retainer",
@@ -474,27 +477,29 @@ const MOUTH_DATA = [
     sub_en:"Upper lip, left side — mimics Marilyn Monroe's beauty mark", sub_th:"ริมฝีปากบนซ้าย — เลียนแบบไฝของ Marilyn Monroe",
     left:76.71, top:48.56,
     gauge:"16G (1.2mm)",
-    mm:"8–10mm initial → downsize to 6mm after healing",
+    mm_en:"8–10mm initial → downsize to 6–8mm after swelling settles",
+    mm_th:"จิวแรก 8–10mm → downsize เป็น 6–8mm หลังบวมยุบ",
     type_en:"Soft tissue", type_th:"เนื้อ",
     heal_en:"8–12 weeks", heal_th:"8–12 สัปดาห์",
     pain_en:"4/10 — Quick sharp pinch", pain_th:"4/10 — เจ็บแปลบ",
     jewelry_en:"Flat back labret stud",
     jewelry_th:"Flat back labret stud",
-    tip_en:"Initial jewelry must be longer (8–10mm) to allow for swelling. Downsize to 6mm once healed — leaving a long post in long-term can cause gum recession and enamel damage.",
-    tip_th:"จิวตอนแรกต้องยาว (8–10mm) เผื่อบวม หลังหายแล้วให้เปลี่ยนเป็นขนาดสั้น (6mm) — ถ้าปล่อยทิ้งนานอาจทำให้เหงือกร่นและสึกฟันได้"
+    tip_en:"Initial jewelry must be longer (8–10mm) to allow for swelling. Downsize to 6–8mm once swelling settles, often around 2–4 weeks — leaving a long post long-term can cause gum recession and enamel damage.",
+    tip_th:"จิวตอนแรกต้องยาว (8–10mm) เผื่อบวม เมื่อบวมยุบให้ downsize เป็น 6–8mm โดยมักอยู่ช่วง 2–4 สัปดาห์ — ถ้าปล่อยก้านยาวไว้นานอาจทำให้เหงือกร่นและฟันสึกได้"
   },
   {
     id:"medusa", name:"Medusa",
     sub_en:"Center above upper lip (philtrum)", sub_th:"กึ่งกลางเหนือริมฝีปากบน (philtrum)",
     left:49.20, top:48.56,
     gauge:"16G (1.2mm)",
-    mm:"10mm initial → downsize to 8mm after healing",
+    mm_en:"8–10mm initial → downsize to 6–8mm after swelling settles",
+    mm_th:"จิวแรก 8–10mm → downsize เป็น 6–8mm หลังบวมยุบ",
     type_en:"Soft tissue", type_th:"เนื้อ",
     heal_en:"8–12 weeks", heal_th:"8–12 สัปดาห์",
     pain_en:"3–5/10 — Moderate", pain_th:"3–5/10 — ปานกลาง",
     jewelry_en:"Flat back labret stud",
     jewelry_th:"Flat back labret stud",
-    tip_en:"Placed through the philtrum groove above the upper lip. Swelling peaks at day 2–3. Visit your piercer at 2–4 weeks to downsize the post — leaving a long post in permanently damages gums.",
+    tip_en:"Placed through the philtrum groove above the upper lip. Swelling often peaks around day 2–3. Visit your piercer at 2–4 weeks to downsize the post — leaving a long post in long-term can damage gums.",
     tip_th:"เจาะผ่านร่อง philtrum เหนือริมฝีปากบน บวมสูงสุดช่วงวันที่ 2–3 กลับไปหาช่างที่ 2–4 สัปดาห์เพื่อเปลี่ยนเป็นขนาดสั้น การทิ้งจิวที่ยาวเกินไว้นานอาจทำให้เหงือกเสียหายได้"
   },
   {
@@ -502,21 +507,23 @@ const MOUTH_DATA = [
     sub_en:"Upper lip, right side — mimics Madonna's beauty mark", sub_th:"ริมฝีปากบนขวา — เลียนแบบไฝของ Madonna",
     left:25.36, top:49.68,
     gauge:"16G (1.2mm)",
-    mm:"8–10mm initial → downsize to 6mm after healing",
+    mm_en:"8–10mm initial → downsize to 6–8mm after swelling settles",
+    mm_th:"จิวแรก 8–10mm → downsize เป็น 6–8mm หลังบวมยุบ",
     type_en:"Soft tissue", type_th:"เนื้อ",
     heal_en:"8–12 weeks", heal_th:"8–12 สัปดาห์",
     pain_en:"4/10 — Quick sharp pinch", pain_th:"4/10 — เจ็บแปลบ",
     jewelry_en:"Flat back labret stud",
     jewelry_th:"Flat back labret stud",
-    tip_en:"Mirror image of the Monroe (right side). Named after Madonna's iconic beauty mark. Getting both Monroe + Madonna together is called Angel Bites. Same jewelry and aftercare as Monroe.",
-    tip_th:"อยู่ฝั่งตรงข้ามกับ Monroe (ฝั่งขวา) ตั้งชื่อตามไฝของ Madonna เจาะทั้งสองข้างพร้อมกันเรียกว่า Angel Bites จิวและการดูแลเหมือน Monroe ทุกอย่าง"
+    tip_en:"Mirror image of the Monroe (right side). Getting both Monroe + Madonna together is called Angel Bites. Downsize after swelling settles to reduce gum and tooth irritation.",
+    tip_th:"อยู่ฝั่งตรงข้ามกับ Monroe (ฝั่งขวา) เจาะทั้งสองข้างพร้อมกันเรียกว่า Angel Bites ให้ downsize หลังบวมยุบเพื่อลดการเสียดสีกับเหงือกและฟัน"
   },
   {
     id:"ashley", name:"Ashley",
     sub_en:"Through the center of the lower lip", sub_th:"ทะลุกลางริมฝีปากล่าง",
     left:49.20, top:76.40,
     gauge:"16G (1.2mm)",
-    mm:"10–12mm initial (accounts for lip thickness + swelling)",
+    mm_en:"10–12mm initial (accounts for lip thickness + swelling)",
+    mm_th:"จิวแรก 10–12mm (เผื่อความหนาริมฝีปากและอาการบวม)",
     type_en:"Soft tissue", type_th:"เนื้อ",
     heal_en:"12+ weeks", heal_th:"12 สัปดาห์ขึ้นไป",
     pain_en:"Moderate–High / 6–7/10", pain_th:"ปานกลาง–สูง / 6–7/10",
@@ -530,14 +537,15 @@ const MOUTH_DATA = [
     sub_en:"Below the lower lip, center", sub_th:"ใต้ริมฝีปากล่าง กึ่งกลาง",
     left:49.04, top:90.59,
     gauge:"16G (1.2mm)",
-    mm:"8–10mm initial → downsize to 6–8mm after healing",
+    mm_en:"8–10mm initial → downsize to 6–8mm after swelling settles",
+    mm_th:"จิวแรก 8–10mm → downsize เป็น 6–8mm หลังบวมยุบ",
     type_en:"Soft tissue", type_th:"เนื้อ",
-    heal_en:"6–8 weeks", heal_th:"6–8 สัปดาห์",
+    heal_en:"7–9 weeks", heal_th:"7–9 สัปดาห์",
     pain_en:"4/10 — Mild to moderate", pain_th:"4/10 — น้อยถึงปานกลาง",
-    jewelry_en:"Flat back labret stud, Hoop (once fully healed)",
-    jewelry_th:"Flat back labret stud, ห่วง (หลังหายสนิท)",
-    tip_en:"One of the most straightforward lip piercings. The flat disc sits inside against the lower gum — mild nesting is normal. Brush teeth gently and rinse with alcohol-free mouthwash after every meal.",
-    tip_th:"หายง่ายที่สุดในกลุ่ม lip piercings แผ่นด้านในจะแนบกับเหงือกล่าง มีรอยบุ๋มเล็กน้อยถือว่าปกติ แปรงฟันเบาๆ และบ้วนปากด้วยน้ำยาที่ไม่มีแอลกอฮอล์หลังทุกมื้ออาหาร"
+    jewelry_en:"Flat back labret stud for initial healing; hoop once fully healed",
+    jewelry_th:"เริ่มด้วย Flat back labret stud; ห่วงหลังหายสนิท",
+    tip_en:"One of the most straightforward lip piercings. Mild nesting inside the lip can be normal once healed. Downsize after swelling settles, brush gently, and rinse with alcohol-free mouthwash after meals.",
+    tip_th:"หายง่ายที่สุดในกลุ่ม lip piercings มีรอยบุ๋มเล็กน้อยด้านในหลังหายถือว่าปกติ ให้ downsize หลังบวมยุบ แปรงฟันเบาๆ และบ้วนปากด้วยน้ำยาที่ไม่มีแอลกอฮอล์หลังมื้ออาหาร"
   }
 ];
 
@@ -551,7 +559,7 @@ function renderCard(area, p) {
   document.getElementById(area + 'Title').textContent = p.name;
   document.getElementById(area + 'Sub').textContent = get('sub');
   document.getElementById(area + 'Gauge').textContent = p.gauge;
-  document.getElementById(area + 'Mm').textContent = p.mm;
+  document.getElementById(area + 'Mm').textContent = get('mm');
   document.getElementById(area + 'Type').textContent = get('type');
   document.getElementById(area + 'Heal').textContent = get('heal');
   document.getElementById(area + 'Pain').textContent = get('pain');
