@@ -36,8 +36,19 @@ header p { font-size:13px; color:var(--text-muted); margin-top:5px; font-weight:
 .lang-btn:last-child { border-radius:0 4px 4px 0; }
 .lang-btn.active { background:var(--red); color:#fff; border-color:var(--red); }
 
+.guide-note {
+  max-width:860px;
+  margin:10px auto 0;
+  padding:0 20px;
+  text-align:center;
+  font-size:13px;
+  line-height:1.55;
+  color:var(--text-muted);
+  font-weight:300;
+}
+
 /* TABS */
-.tabs { display:flex; justify-content:center; gap:0; padding:20px 20px 0; border-bottom:1px solid var(--border); }
+.tabs { display:flex; justify-content:center; gap:0; padding:18px 20px 0; border-bottom:1px solid var(--border); }
 .tab-btn {
   font-family:'Cormorant Garamond',serif; font-size:16px; font-weight:500;
   letter-spacing:1.5px; padding:10px 28px; border:none; background:transparent;
@@ -133,7 +144,7 @@ footer p { font-size:11px; color:var(--text-muted); margin-top:4px; opacity:0.6;
   <button class="lang-btn" onclick="setLang('en')">English</button>
 </div>
 
-<p class="header-sub" data-th="ขนาดจิว ระยะหาย และระดับความเจ็บเป็นค่าโดยประมาณ ขึ้นกับสรีระแต่ละคนและคำแนะนำจากช่างเจาะ" data-en="Jewelry size, healing time, and pain level are general estimates. Anatomy and your piercer's advice matter most.">ขนาดจิว ระยะหาย และระดับความเจ็บเป็นค่าโดยประมาณ ขึ้นกับสรีระแต่ละคนและคำแนะนำจากช่างเจาะ</p>
+<p class="guide-note" data-th="ข้อมูลนี้เป็นแนวทางเบื้องต้น ขนาดจิว ระยะเวลาที่แผลหาย และระดับความเจ็บอาจแตกต่างกันตามสรีระ ตำแหน่งเจาะ และการดูแลหลังเจาะ" data-en="This guide is a general reference. Jewelry size, healing time, and pain level can vary depending on anatomy, placement, and aftercare.">ข้อมูลนี้เป็นแนวทางเบื้องต้น ขนาดจิว ระยะเวลาที่แผลหาย และระดับความเจ็บอาจแตกต่างกันตามสรีระ ตำแหน่งเจาะ และการดูแลหลังเจาะ</p>
 
 <div class="tabs">
   <button class="tab-btn active" onclick="switchTab('ear')" data-th="👂 หู" data-en="👂 Ear">👂 หู</button>
@@ -344,8 +355,8 @@ const EAR_DATA = [
     pain_en:"4/10 — Quick pinch", pain_th:"4/10 — เจ็บแปลบ",
     jewelry_en:"Flat back stud for initial healing; small hoop (6mm) once healed",
     jewelry_th:"เริ่มด้วย Flat back stud; ห่วงเล็ก (6mm) หลังหาย",
-    tip_en:"You can stack 1–3 piercings in a row here, called a triple forward helix. Start with a flat back stud and let your piercer choose the length for swelling.",
-    tip_th:"สามารถเจาะซ้อน 1–3 จุดเรียงกันได้ เรียกว่า triple forward helix แนะนำเริ่มด้วย flat back stud และให้ช่างเลือกความยาวเผื่อบวม"
+    tip_en:"You can stack 1–3 piercings in a row here, called a triple forward helix. Start with a flat back stud in a length that allows room for swelling.",
+    tip_th:"สามารถเจาะซ้อน 1–3 จุดเรียงกันได้ เรียกว่า triple forward helix แนะนำเริ่มด้วย flat back stud ที่มีความยาวพอเผื่อบวม"
   },
   {
     id:"daith", name:"Daith",
@@ -372,8 +383,8 @@ const EAR_DATA = [
     pain_en:"7–9/10 — One of the most painful ear piercings", pain_th:"7–9/10 — หนึ่งในการเจาะหูที่เจ็บที่สุด",
     jewelry_en:"Curved barbell only (due to anatomy)",
     jewelry_th:"Curved barbell เท่านั้น (เนื่องจากรูปร่างของหู)",
-    tip_en:"Not every ear anatomy supports a snug — consult your piercer first. Healing takes 12+ months. Curved barbells are the only suitable jewelry style for this piercing. Not recommended for first-timers.",
-    tip_th:"ไม่ใช่ทุกคนที่มีหูเหมาะกับการเจาะ Snug — ให้ช่างดูก่อนเสมอ หายนานกว่า 12 เดือน และใส่ได้เฉพาะ curved barbell เท่านั้น ไม่แนะนำสำหรับมือใหม่"
+    tip_en:"Not every ear anatomy supports a snug — anatomy should be checked before piercing. Healing takes 12+ months. Curved barbells are the only suitable jewelry style for this piercing. Not recommended for first-timers.",
+    tip_th:"ไม่ใช่ทุกคนที่มีหูเหมาะกับการเจาะ Snug — ควรเช็กรูปทรงหูก่อนเจาะเสมอ หายนานกว่า 12 เดือน และใส่ได้เฉพาะ curved barbell เท่านั้น ไม่แนะนำสำหรับมือใหม่"
   },
   {
     id:"tragus", name:"Tragus",
@@ -415,8 +426,8 @@ const EAR_DATA = [
     pain_en:"2/10 — Very mild", pain_th:"2/10 — เจ็บน้อยมาก",
     jewelry_en:"Stud, Small hoop, Flat back stud",
     jewelry_th:"Stud, ห่วงเล็ก, Flat back stud",
-    tip_en:"Soft tissue heals faster than cartilage. Great for building a stacked lobe look. Wait at least 6–8 weeks and have your piercer check before changing jewelry for the first time.",
-    tip_th:"บริเวณนี้หายเร็วกว่ากระดูกอ่อนมาก เหมาะสำหรับทำ stacked lobe look รออย่างน้อย 6–8 สัปดาห์ และให้ช่างเช็กก่อนเปลี่ยนจิวครั้งแรก"
+    tip_en:"Soft tissue heals faster than cartilage. Great for building a stacked lobe look. Wait at least 6–8 weeks and make sure there is no pain, redness, swelling, or crusting before changing jewelry for the first time.",
+    tip_th:"บริเวณนี้หายเร็วกว่ากระดูกอ่อนมาก เหมาะสำหรับทำ stacked lobe look รออย่างน้อย 6–8 สัปดาห์ และควรไม่มีอาการเจ็บ แดง บวม หรือคราบสะเก็ดก่อนเปลี่ยนจิวครั้งแรก"
   },
   {
     id:"lobe", name:"Lobe",
@@ -499,8 +510,8 @@ const MOUTH_DATA = [
     pain_en:"3–5/10 — Moderate", pain_th:"3–5/10 — ปานกลาง",
     jewelry_en:"Flat back labret stud",
     jewelry_th:"Flat back labret stud",
-    tip_en:"Placed through the philtrum groove above the upper lip. Swelling often peaks around day 2–3. Visit your piercer at 2–4 weeks to downsize the post — leaving a long post in long-term can damage gums.",
-    tip_th:"เจาะผ่านร่อง philtrum เหนือริมฝีปากบน บวมสูงสุดช่วงวันที่ 2–3 กลับไปหาช่างที่ 2–4 สัปดาห์เพื่อเปลี่ยนเป็นขนาดสั้น การทิ้งจิวที่ยาวเกินไว้นานอาจทำให้เหงือกเสียหายได้"
+    tip_en:"Placed through the philtrum groove above the upper lip. Swelling often peaks around day 2–3. Downsize the post after swelling settles, often around 2–4 weeks — leaving a long post in long-term can damage gums.",
+    tip_th:"เจาะผ่านร่อง philtrum เหนือริมฝีปากบน บวมสูงสุดช่วงวันที่ 2–3 ควร downsize หลังบวมยุบ โดยมักอยู่ช่วง 2–4 สัปดาห์ การทิ้งจิวที่ยาวเกินไว้นานอาจทำให้เหงือกเสียหายได้"
   },
   {
     id:"madonna", name:"Madonna",
