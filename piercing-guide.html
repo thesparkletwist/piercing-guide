@@ -126,6 +126,33 @@ header p { font-size:13px; color:var(--text-muted); margin-top:5px; font-weight:
 .tip-box .tip-label { font-size:10px; letter-spacing:1.5px; text-transform:uppercase; color:var(--gold); font-weight:600; margin-bottom:4px; }
 .tip-box p { font-size:12.5px; color:var(--text); line-height:1.6; }
 
+.shop-btn-wrap { margin-top:16px; }
+.shop-btn {
+  display:flex; align-items:center; justify-content:center; gap:8px;
+  background:linear-gradient(135deg, #c0392b 0%, #e74c3c 100%);
+  color:#fff;
+  font-family:'Cormorant Garamond',serif; font-size:15px; font-weight:600; letter-spacing:1.5px;
+  padding:13px 20px; border-radius:8px; text-decoration:none;
+  transition:all 0.2s ease;
+  box-shadow:0 3px 12px rgba(192,57,43,0.35), 0 1px 3px rgba(0,0,0,0.12);
+  border:none; cursor:pointer; width:100%; position:relative; overflow:hidden;
+}
+.shop-btn::after {
+  content:''; position:absolute; inset:0;
+  background:linear-gradient(135deg, rgba(255,255,255,0.12) 0%, transparent 60%);
+  pointer-events:none;
+}
+.shop-btn:hover {
+  background:linear-gradient(135deg, #a93226 0%, #c0392b 100%);
+  transform:translateY(-2px);
+  box-shadow:0 6px 18px rgba(192,57,43,0.45), 0 2px 6px rgba(0,0,0,0.15);
+}
+.shop-btn:active { transform:translateY(0); box-shadow:0 2px 8px rgba(192,57,43,0.3); }
+.shop-btn svg { width:16px; height:16px; fill:none; stroke:#fff; stroke-width:2.2; stroke-linecap:round; stroke-linejoin:round; flex-shrink:0; }
+.shop-btn .btn-arrow { font-size:16px; transition:transform 0.2s; }
+.shop-btn:hover .btn-arrow { transform:translateX(3px); }
+.shop-btn.hidden { display:none; }
+
 footer { text-align:center; padding:28px 20px; border-top:1px solid var(--border); margin-top:16px; }
 .logo-text { font-family:'Cormorant Garamond',serif; font-size:13px; letter-spacing:3px; color:var(--text-muted); text-transform:uppercase; }
 footer p { font-size:11px; color:var(--text-muted); margin-top:4px; opacity:0.6; }
@@ -182,6 +209,13 @@ footer p { font-size:11px; color:var(--text-muted); margin-top:4px; opacity:0.6;
           <div class="info-row"><span class="info-label" data-th="ความเจ็บ" data-en="Pain">ความเจ็บ</span><span class="info-value" id="earPain">—</span></div>
           <div class="info-row"><span class="info-label" data-th="จิวที่ใส่" data-en="Jewelry">จิวที่ใส่</span><span class="info-value" id="earJewelry">—</span></div>
           <div class="tip-box"><div class="tip-label">💡 Tip</div><p id="earTip">—</p></div>
+          <div class="shop-btn-wrap">
+            <a id="earShopBtn" class="shop-btn hidden" href="#" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+              <span data-th="ดูจิวตำแหน่งนี้เลย" data-en="Shop this placement">ดูจิวตำแหน่งนี้เลย</span>
+              <span class="btn-arrow">&rarr;</span>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -218,6 +252,13 @@ footer p { font-size:11px; color:var(--text-muted); margin-top:4px; opacity:0.6;
           <div class="info-row"><span class="info-label" data-th="ความเจ็บ" data-en="Pain">ความเจ็บ</span><span class="info-value" id="nosePain">—</span></div>
           <div class="info-row"><span class="info-label" data-th="จิวที่ใส่" data-en="Jewelry">จิวที่ใส่</span><span class="info-value" id="noseJewelry">—</span></div>
           <div class="tip-box"><div class="tip-label">💡 Tip</div><p id="noseTip">—</p></div>
+          <div class="shop-btn-wrap">
+            <a id="noseShopBtn" class="shop-btn hidden" href="#" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+              <span data-th="ดูจิวตำแหน่งนี้เลย" data-en="Shop this placement">ดูจิวตำแหน่งนี้เลย</span>
+              <span class="btn-arrow">&rarr;</span>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -254,6 +295,13 @@ footer p { font-size:11px; color:var(--text-muted); margin-top:4px; opacity:0.6;
           <div class="info-row"><span class="info-label" data-th="ความเจ็บ" data-en="Pain">ความเจ็บ</span><span class="info-value" id="mouthPain">—</span></div>
           <div class="info-row"><span class="info-label" data-th="จิวที่ใส่" data-en="Jewelry">จิวที่ใส่</span><span class="info-value" id="mouthJewelry">—</span></div>
           <div class="tip-box"><div class="tip-label">💡 Tip</div><p id="mouthTip">—</p></div>
+          <div class="shop-btn-wrap">
+            <a id="mouthShopBtn" class="shop-btn hidden" href="#" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+              <span data-th="ดูจิวตำแหน่งนี้เลย" data-en="Shop this placement">ดูจิวตำแหน่งนี้เลย</span>
+              <span class="btn-arrow">&rarr;</span>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -266,6 +314,18 @@ footer p { font-size:11px; color:var(--text-muted); margin-top:4px; opacity:0.6;
 </footer>
 
 <script>
+// ============================================================
+// SHOPIFY CONFIG — แก้ URL ของร้านตรงนี้
+// ============================================================
+const SHOPIFY_BASE_URL = 'https://plain2perfect.myshopify.com'; // ← เปลี่ยนเป็น URL ร้านคุณ
+const SHOPIFY_COLLECTION = 'collections/all';                    // ← หรือเปลี่ยนเป็น collection อื่น
+
+function getShopifyTagURL(tag) {
+  if (!tag) return null;
+  const slug = tag.toLowerCase().replace(/\s+/g, '-');
+  return `${SHOPIFY_BASE_URL}/${SHOPIFY_COLLECTION}/${slug}`;
+}
+
 // ============================================================
 // LANGUAGE
 // ============================================================
@@ -303,7 +363,7 @@ function t(p, field) {
 // ============================================================
 const EAR_DATA = [
   {
-    id:"helix", name:"Helix",
+    id:"helix", name:"Helix", tag:"helix",
     sub_en:"Outer cartilage rim", sub_th:"กระดูกอ่อนขอบนอกหู",
     left:64.4, top:27.09,
     gauge:"16G (1.2mm)",
@@ -317,7 +377,7 @@ const EAR_DATA = [
     tip_th:"กระดูกอ่อนมีเลือดไหลเวียนน้อย ทำให้หายช้ากว่าติ่งหู หลีกเลี่ยงการนอนทับหูที่เจาะอย่างน้อย 3 เดือน ห่วงขยับง่ายกว่า จึงเหมาะกับรูที่หายสนิทแล้ว"
   },
   {
-    id:"rook", name:"Rook",
+    id:"rook", name:"Rook", tag:"rook",
     sub_en:"Upper inner ridge", sub_th:"สันกระดูกอ่อนด้านในบน",
     left:49.92, top:31.75,
     gauge:"16G (1.2mm)",
@@ -331,7 +391,7 @@ const EAR_DATA = [
     tip_th:"Rook ทะลุผ่านกระดูกอ่อนชั้นในที่หนา จะรู้สึกถูกกดแรงมากขณะเจาะ Curved barbell เหมาะที่สุดช่วงกำลังหายตามรูปทรงหู ไม่แนะนำสำหรับมือใหม่"
   },
   {
-    id:"flat-helix", name:"Flat / Flat Helix",
+    id:"flat-helix", name:"Flat / Flat Helix", tag:"flat",
     sub_en:"Flat cartilage area", sub_th:"กระดูกอ่อนพื้นที่แบน",
     left:61.63, top:34.08,
     gauge:"16G (1.2mm)",
@@ -345,7 +405,7 @@ const EAR_DATA = [
     tip_th:"พื้นที่แบนเหมาะกับ flat back stud มาก เป็นจุดที่เหมาะสำหรับทำ ear stack มาก — ใส่หลายชิ้นเรียงกัน ให้ look สะอาดแบบ curated ear"
   },
   {
-    id:"forward-helix", name:"Forward Helix",
+    id:"forward-helix", name:"Forward Helix", tag:"helix",
     sub_en:"Front upper cartilage, near face", sub_th:"กระดูกอ่อนด้านหน้าบน ใกล้ใบหน้า",
     left:43.35, top:34.49,
     gauge:"16G–18G (1.0–1.2mm)",
@@ -359,7 +419,7 @@ const EAR_DATA = [
     tip_th:"สามารถเจาะซ้อน 1–3 จุดเรียงกันได้ เรียกว่า triple forward helix แนะนำเริ่มด้วย flat back stud ที่มีความยาวพอเผื่อบวม"
   },
   {
-    id:"daith", name:"Daith",
+    id:"daith", name:"Daith", tag:"daith",
     sub_en:"Innermost cartilage fold", sub_th:"พับกระดูกอ่อนชั้นในสุด",
     left:42.96, top:42.52,
     gauge:"16G (1.2mm)",
@@ -373,7 +433,7 @@ const EAR_DATA = [
     tip_th:"Daith อยู่ที่พับกระดูกอ่อนชั้นในสุด ห่วงหรือ Clicker ring เหมาะกับรูปทรงตำแหน่งนี้ มีหลายคนบอกว่าช่วยบรรเทาไมเกรน แต่ยังไม่มีหลักฐานทางการแพทย์รับรอง"
   },
   {
-    id:"snug", name:"Snug",
+    id:"snug", name:"Snug", tag:"snug",
     sub_en:"Inner anti-helix ridge", sub_th:"สันกระดูกอ่อน anti-helix ด้านใน",
     left:58.86, top:42.93,
     gauge:"16G (1.2mm)",
@@ -387,7 +447,7 @@ const EAR_DATA = [
     tip_th:"ไม่ใช่ทุกคนที่มีหูเหมาะกับการเจาะ Snug — ควรเช็กรูปทรงหูก่อนเจาะเสมอ หายนานกว่า 12 เดือน และใส่ได้เฉพาะ curved barbell เท่านั้น ไม่แนะนำสำหรับมือใหม่"
   },
   {
-    id:"tragus", name:"Tragus",
+    id:"tragus", name:"Tragus", tag:"tragus",
     sub_en:"Small cartilage flap over ear canal", sub_th:"กระดูกอ่อนแผ่นเล็กปิดช่องหู",
     left:38.92, top:51.21,
     gauge:"16G (1.2mm)",
@@ -401,7 +461,7 @@ const EAR_DATA = [
     tip_th:"บางคนอาจได้ยินเสียงกรอบแกรบระหว่างเจาะกระดูกอ่อน ซึ่งเกิดขึ้นได้ หลีกเลี่ยงหูฟัง in-ear และ earbud ช่วง 3–6 เดือนแรก เพราะกดทับตรงจุดที่กำลังหาย"
   },
   {
-    id:"conch", name:"Conch",
+    id:"conch", name:"Conch", tag:"conch",
     sub_en:"Inner bowl of the ear", sub_th:"แอ่งด้านในของหู",
     left:54.67, top:52.65,
     gauge:"16G (1.2mm)",
@@ -416,7 +476,7 @@ const EAR_DATA = [
     tip_th:"เริ่มด้วย flat back stud ที่ยาวพอเผื่อบวม แล้วค่อย downsize เมื่อบวมยุบ พอหายสนิทแล้วเปลี่ยนเป็นห่วง 10–12mm ได้ตามรูปทรงหู"
   },
   {
-    id:"upper-lobe", name:"Upper Lobe",
+    id:"upper-lobe", name:"Upper Lobe", tag:"upper lobe",
     sub_en:"Second or third lobe position", sub_th:"ตำแหน่ง lobe ที่ 2 หรือ 3",
     left:50.47, top:66.24,
     gauge:"18G–20G (0.8–1.0mm)",
@@ -430,7 +490,7 @@ const EAR_DATA = [
     tip_th:"บริเวณนี้หายเร็วกว่ากระดูกอ่อนมาก เหมาะสำหรับทำ stacked lobe look รออย่างน้อย 6–8 สัปดาห์ และควรไม่มีอาการเจ็บ แดง บวม หรือคราบสะเก็ดก่อนเปลี่ยนจิวครั้งแรก"
   },
   {
-    id:"lobe", name:"Lobe",
+    id:"lobe", name:"Lobe", tag:"lobe",
     sub_en:"Standard earlobe", sub_th:"ติ่งหู",
     left:40.35, top:73.31,
     gauge:"18G–20G (0.8–1.0mm)",
@@ -450,7 +510,7 @@ const EAR_DATA = [
 // ============================================================
 const NOSE_DATA = [
   {
-    id:"nostril", name:"Nostril",
+    id:"nostril", name:"Nostril", tag:"nostril",
     sub_en:"Side of the nose", sub_th:"ข้างรูจมูก",
     left:67.77, top:36.64,
     gauge:"18G–20G (0.8–1.0mm)",
@@ -464,7 +524,7 @@ const NOSE_DATA = [
     tip_th:"ตำแหน่งที่นิยมคือเหนือรอยพับของรูจมูก เจาะข้างเดียวหรือทั้งสองข้างก็ได้ อย่าหมุนหรือแตะจิวบ่อยๆ เพราะเป็นสาเหตุหลักที่ทำให้หายช้า"
   },
   {
-    id:"septum", name:"Septum",
+    id:"septum", name:"Septum", tag:"septum",
     sub_en:"Soft tissue between nostrils", sub_th:"เนื้อระหว่างรูจมูก",
     left:58.47, top:55.21,
     gauge:"16G–18G (1.0–1.2mm)",
@@ -484,7 +544,7 @@ const NOSE_DATA = [
 // ============================================================
 const MOUTH_DATA = [
   {
-    id:"monroe", name:"Monroe",
+    id:"monroe", name:"Monroe", tag:"monroe",
     sub_en:"Upper lip, left side — mimics Marilyn Monroe's beauty mark", sub_th:"ริมฝีปากบนซ้าย — เลียนแบบไฝของ Marilyn Monroe",
     left:76.71, top:48.56,
     gauge:"16G (1.2mm)",
@@ -499,7 +559,7 @@ const MOUTH_DATA = [
     tip_th:"จิวตอนแรกต้องยาว (8–10mm) เผื่อบวม เมื่อบวมยุบให้ downsize เป็น 6–8mm โดยมักอยู่ช่วง 2–4 สัปดาห์ — ถ้าปล่อยก้านยาวไว้นานอาจทำให้เหงือกร่นและฟันสึกได้"
   },
   {
-    id:"medusa", name:"Medusa",
+    id:"medusa", name:"Medusa", tag:"medusa",
     sub_en:"Center above upper lip (philtrum)", sub_th:"กึ่งกลางเหนือริมฝีปากบน (philtrum)",
     left:49.20, top:48.56,
     gauge:"16G (1.2mm)",
@@ -514,7 +574,7 @@ const MOUTH_DATA = [
     tip_th:"เจาะผ่านร่อง philtrum เหนือริมฝีปากบน บวมสูงสุดช่วงวันที่ 2–3 ควร downsize หลังบวมยุบ โดยมักอยู่ช่วง 2–4 สัปดาห์ การทิ้งจิวที่ยาวเกินไว้นานอาจทำให้เหงือกเสียหายได้"
   },
   {
-    id:"madonna", name:"Madonna",
+    id:"madonna", name:"Madonna", tag:"madonna",
     sub_en:"Upper lip, right side — mimics Madonna's beauty mark", sub_th:"ริมฝีปากบนขวา — เลียนแบบไฝของ Madonna",
     left:25.36, top:49.68,
     gauge:"16G (1.2mm)",
@@ -529,7 +589,7 @@ const MOUTH_DATA = [
     tip_th:"อยู่ฝั่งตรงข้ามกับ Monroe (ฝั่งขวา) เจาะทั้งสองข้างพร้อมกันเรียกว่า Angel Bites ให้ downsize หลังบวมยุบเพื่อลดการเสียดสีกับเหงือกและฟัน"
   },
   {
-    id:"ashley", name:"Ashley",
+    id:"ashley", name:"Ashley", tag:"ashley",
     sub_en:"Through the center of the lower lip", sub_th:"ทะลุกลางริมฝีปากล่าง",
     left:49.20, top:76.40,
     gauge:"16G (1.2mm)",
@@ -544,7 +604,7 @@ const MOUTH_DATA = [
     tip_th:"ต่างจาก Labret ตรงที่ Ashley ทะลุออกทางด้านในปาก — เห็นเฉพาะ gem ด้านหน้าริมฝีปาก ต้องทำความสะอาดทั้งด้านนอกและด้านใน หายช้ากว่า lip piercing ทั่วไป"
   },
   {
-    id:"labret", name:"Labret",
+    id:"labret", name:"Labret", tag:"labret",
     sub_en:"Below the lower lip, center", sub_th:"ใต้ริมฝีปากล่าง กึ่งกลาง",
     left:49.04, top:90.59,
     gauge:"16G (1.2mm)",
@@ -576,6 +636,23 @@ function renderCard(area, p) {
   document.getElementById(area + 'Pain').textContent = get('pain');
   document.getElementById(area + 'Jewelry').textContent = get('jewelry');
   document.getElementById(area + 'Tip').textContent = get('tip');
+
+  // Shop button
+  const shopBtn = document.getElementById(area + 'ShopBtn');
+  const shopUrl = getShopifyTagURL(p.tag);
+  if (shopBtn) {
+    if (shopUrl) {
+      shopBtn.href = shopUrl;
+      shopBtn.classList.remove('hidden');
+      // Update button text for current language
+      const span = shopBtn.querySelector('span');
+      if (span) {
+        span.textContent = lang === 'en' ? 'Shop this placement' : 'ดูจิวตำแหน่งนี้เลย';
+      }
+    } else {
+      shopBtn.classList.add('hidden');
+    }
+  }
 }
 
 // ============================================================
