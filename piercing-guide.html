@@ -731,7 +731,7 @@ function loadProductPreview(area, tag) {
   grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:16px 0"><div style="display:inline-block;width:20px;height:20px;border:2px solid #eee;border-top-color:#c0392b;border-radius:50%;animation:spin 0.6s linear infinite"></div></div>';
 
   const slug = tag.toLowerCase().replace(/\s+/g, '-');
-  const url = `${SHOPIFY_BASE_URL}/${SHOPIFY_COLLECTION}/${slug}/products.json?limit=3`;
+  const url = `${SHOPIFY_BASE_URL}/products.json?tag=${encodeURIComponent(tag)}&limit=3`;
 
   fetch(url)
     .then(r => r.json())
