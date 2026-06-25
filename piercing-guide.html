@@ -126,7 +126,57 @@ header p { font-size:13px; color:var(--text-muted); margin-top:5px; font-weight:
 .tip-box .tip-label { font-size:10px; letter-spacing:1.5px; text-transform:uppercase; color:var(--gold); font-weight:600; margin-bottom:4px; }
 .tip-box p { font-size:12.5px; color:var(--text); line-height:1.6; }
 
-.shop-btn-wrap { margin-top:16px; }
+.shop-btn-wrap { margin-top:16px; position:relative; }
+
+/* Product preview tooltip */
+.product-preview {
+  display:none;
+  position:absolute;
+  bottom:calc(100% + 10px);
+  left:50%; transform:translateX(-50%);
+  width:280px;
+  background:#fff;
+  border-radius:12px;
+  box-shadow:0 8px 32px rgba(0,0,0,0.18), 0 2px 8px rgba(0,0,0,0.08);
+  padding:12px;
+  z-index:999;
+  pointer-events:none;
+}
+.product-preview::after {
+  content:'';
+  position:absolute;
+  top:100%; left:50%; transform:translateX(-50%);
+  border:7px solid transparent;
+  border-top-color:#fff;
+}
+.product-preview.loading::before {
+  content:''; display:block; width:20px; height:20px;
+  border:2px solid #eee; border-top-color:#c0392b;
+  border-radius:50%; animation:spin 0.6s linear infinite;
+  margin:20px auto;
+}
+@keyframes spin { to { transform:rotate(360deg); } }
+.preview-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; }
+.preview-item { text-align:center; }
+.preview-item img {
+  width:100%; aspect-ratio:1; object-fit:cover;
+  border-radius:6px; display:block; border:1px solid #f0ebe3;
+}
+.preview-item p {
+  font-size:10px; color:#555; margin-top:4px;
+  font-family:'Cormorant Garamond',serif;
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}
+.preview-title {
+  font-size:10px; letter-spacing:1.5px; text-transform:uppercase;
+  color:#c0392b; font-weight:600; margin-bottom:8px; text-align:center;
+  font-family:'Cormorant Garamond',serif;
+}
+.preview-empty {
+  text-align:center; font-size:12px; color:#999;
+  padding:16px 0; font-family:'Cormorant Garamond',serif;
+}
+.shop-btn-wrap:hover .product-preview { display:block; }
 .shop-btn {
   display:flex; align-items:center; justify-content:center; gap:8px;
   background:linear-gradient(135deg, #c0392b 0%, #e74c3c 100%);
@@ -210,6 +260,7 @@ footer p { font-size:11px; color:var(--text-muted); margin-top:4px; opacity:0.6;
           <div class="info-row"><span class="info-label" data-th="จิวที่ใส่" data-en="Jewelry">จิวที่ใส่</span><span class="info-value" id="earJewelry">—</span></div>
           <div class="tip-box"><div class="tip-label">💡 Tip</div><p id="earTip">—</p></div>
           <div class="shop-btn-wrap">
+            <div id="earPreview" class="product-preview"><div class="preview-title" data-th="สินค้าในตำแหน่งนี้" data-en="Products for this placement">สินค้าในตำแหน่งนี้</div><div class="preview-grid"></div></div>
             <a id="earShopBtn" class="shop-btn hidden" href="#" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
               <span data-th="ดูจิวตำแหน่งนี้เลย" data-en="Shop this placement">ดูจิวตำแหน่งนี้เลย</span>
@@ -253,6 +304,7 @@ footer p { font-size:11px; color:var(--text-muted); margin-top:4px; opacity:0.6;
           <div class="info-row"><span class="info-label" data-th="จิวที่ใส่" data-en="Jewelry">จิวที่ใส่</span><span class="info-value" id="noseJewelry">—</span></div>
           <div class="tip-box"><div class="tip-label">💡 Tip</div><p id="noseTip">—</p></div>
           <div class="shop-btn-wrap">
+            <div id="nosePreview" class="product-preview"><div class="preview-title" data-th="สินค้าในตำแหน่งนี้" data-en="Products for this placement">สินค้าในตำแหน่งนี้</div><div class="preview-grid"></div></div>
             <a id="noseShopBtn" class="shop-btn hidden" href="#" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
               <span data-th="ดูจิวตำแหน่งนี้เลย" data-en="Shop this placement">ดูจิวตำแหน่งนี้เลย</span>
@@ -296,6 +348,7 @@ footer p { font-size:11px; color:var(--text-muted); margin-top:4px; opacity:0.6;
           <div class="info-row"><span class="info-label" data-th="จิวที่ใส่" data-en="Jewelry">จิวที่ใส่</span><span class="info-value" id="mouthJewelry">—</span></div>
           <div class="tip-box"><div class="tip-label">💡 Tip</div><p id="mouthTip">—</p></div>
           <div class="shop-btn-wrap">
+            <div id="mouthPreview" class="product-preview"><div class="preview-title" data-th="สินค้าในตำแหน่งนี้" data-en="Products for this placement">สินค้าในตำแหน่งนี้</div><div class="preview-grid"></div></div>
             <a id="mouthShopBtn" class="shop-btn hidden" href="#" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
               <span data-th="ดูจิวตำแหน่งนี้เลย" data-en="Shop this placement">ดูจิวตำแหน่งนี้เลย</span>
@@ -649,10 +702,63 @@ function renderCard(area, p) {
       if (span) {
         span.textContent = lang === 'en' ? 'Shop this placement' : 'ดูจิวตำแหน่งนี้เลย';
       }
+      // Setup product preview
+      loadProductPreview(area, p.tag);
     } else {
       shopBtn.classList.add('hidden');
     }
   }
+}
+
+// ============================================================
+// PRODUCT PREVIEW — fetch from Shopify
+// ============================================================
+const previewCache = {};
+
+function loadProductPreview(area, tag) {
+  const preview = document.getElementById(area + 'Preview');
+  if (!preview || !tag) return;
+  const grid = preview.querySelector('.preview-grid');
+  if (!grid) return;
+
+  // Use cache if available
+  if (previewCache[tag]) {
+    renderPreviewGrid(grid, previewCache[tag]);
+    return;
+  }
+
+  // Show loading spinner
+  grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:16px 0"><div style="display:inline-block;width:20px;height:20px;border:2px solid #eee;border-top-color:#c0392b;border-radius:50%;animation:spin 0.6s linear infinite"></div></div>';
+
+  const slug = tag.toLowerCase().replace(/\s+/g, '-');
+  const url = `${SHOPIFY_BASE_URL}/${SHOPIFY_COLLECTION}/${slug}/products.json?limit=3`;
+
+  fetch(url)
+    .then(r => r.json())
+    .then(data => {
+      const products = (data.products || []).slice(0, 3);
+      previewCache[tag] = products;
+      renderPreviewGrid(grid, products);
+    })
+    .catch(() => {
+      grid.innerHTML = `<div style="grid-column:1/-1;text-align:center;font-size:11px;color:#999;padding:12px 0;font-family:serif">${currentLang === 'en' ? 'No products found' : 'ไม่พบสินค้า'}</div>`;
+    });
+}
+
+function renderPreviewGrid(grid, products) {
+  if (!products || products.length === 0) {
+    grid.innerHTML = `<div style="grid-column:1/-1;text-align:center;font-size:11px;color:#999;padding:12px 0;font-family:serif">${currentLang === 'en' ? 'No products found' : 'ไม่พบสินค้า'}</div>`;
+    return;
+  }
+  grid.innerHTML = products.map(p => {
+    const img = p.images && p.images[0] ? p.images[0].src : '';
+    const price = p.variants && p.variants[0] ? parseFloat(p.variants[0].price).toFixed(0) : '';
+    return `<div class="preview-item">
+      ${img ? `<img src="${img}" alt="${p.title}" loading="lazy">` : '<div style="width:100%;aspect-ratio:1;background:#f5f0eb;border-radius:6px;"></div>'}
+      <p title="${p.title}">${p.title}</p>
+      ${price ? `<p style="color:#c0392b;font-weight:600">฿${price}</p>` : ''}
+    </div>`;
+  }).join('');
 }
 
 // ============================================================
